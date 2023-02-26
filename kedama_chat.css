@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+ /* Background colors - 背景色 */
+body {
+  overflow: hidden;
+  background-color: rgba(0,0,0,0);
+}
+/* Transparent background - 背景透過 2023年ver */
+yt-live-chat-renderer {
+  visibility: hidden !important;
+}
+yt-live-chat-renderer * {
+  visibility: initial !important;
+}
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+
+yt-live-chat-author-chip #author-name {
+  background-color: transparent !important;
+}
+
+/* Outlines - 縁取り */
+yt-live-chat-text-message-renderer * {
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 18px !important;
+  line-height: 20px !important;
+}
+
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-membership-message-renderer #content {
+  overflow: initial !important;
+}
+
+/* Hide scrollbar - スクロールバー非表示 */
+yt-live-chat-item-list-renderer #items{
+  overflow: hidden !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller{
+  overflow: hidden !important;
+}
+
+/* Hide header and input - ヘッダーと入力欄非表示 */
+#panel-pages,
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+/* Reduce side padding - 余白設定 */
+yt-live-chat-text-message-renderer {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+yt-live-chat-membership-item-renderer,
+yt-live-chat-paid-sticker-renderer,
+yt-live-chat-paid-message-renderer {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* 通常アイコン */
+yt-img-shadow#author-photo.yt-live-chat-text-message-renderer{
+  width: 40px !important;
+  height: 40px !important;
+  margin-top: 10px !important; /* 縦の位置を毛玉に合わせる */
+  margin-left: 16.45px !important; /* 横の位置を毛玉に合わせる */
+  margin-right: 35px !important; /* 毛玉分、右に余白を取る */
+}
+
+yt-img-shadow#author-photo.yt-live-chat-text-message-renderer img{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* メンバーシップ・スーパーチャットアイコン */
+yt-img-shadow#author-photo.yt-live-chat-membership-item-renderer,
+yt-img-shadow#author-photo.yt-live-chat-paid-sticker-renderer,
+yt-img-shadow#author-photo.yt-live-chat-paid-message-renderer{
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 40px !important;
+  margin-top: -30px !important;  /* 縦の位置を毛玉に合わせる */
+  margin-bottom: -10px !important;  /* アイコンとリボンの位置を調整 */
+  margin-left: 4px !important;  /* 横の位置を毛玉に合わせる */
+  margin-right: 35px !important;  /* 毛玉分、右に余白を取る */
+}
+
+#author-photo.yt-live-chat-membership-item-renderer img#img,
+#author-photo.yt-live-chat-paid-message-renderer img#img,
+yt-img-shadow#author-photo.yt-live-chat-membership-item-renderer img,
+yt-img-shadow#author-photo.yt-live-chat-paid-sticker-renderer img,
+yt-img-shadow#author-photo.yt-live-chat-paid-message-renderer img{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* Member Badge - モデレーター・メンバーのバッジ(アイコン)サイズ */
+.yt-live-chat-author-badge-renderer,
+.yt-live-chat-author-badge-renderer svg.yt-icon {
+  width: 23px !important;
+  height: 23px !important;
+}
+
+/* Emoji - 絵文字・メンバー用スタンプ */
+#message > img ,
+img.yt-live-chat-text-message-renderer {
+  width: 24px !important;
+  height: 24px !important;
+  background-color: transparent !important;
+}
+
+/* Hide badges - バッジ非表示. */
+yt-live-chat-text-message-renderer #author-badges,
+yt-live-chat-text-message-renderer #chat-badges {
+  vertical-align: text-top !important;
+}
+
+/* Timestamps - 時刻表示 */
+yt-live-chat-text-message-renderer #timestamp {
+  display: none !important;
+  color: #999999 !important;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  font-weight: 400 !important;
+}
+
+/* 配信主のユーザー名 */
+yt-live-chat-text-message-renderer #author-name[type="owner"],
+yt-live-chat-text-message-renderer #author-name.owner,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
+  color: #ffd600 !important;
+}
+
+/* モデレーターのユーザー名 */
+yt-live-chat-text-message-renderer #author-name[type="moderator"],
+yt-live-chat-text-message-renderer #author-name.moderator,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="moderator"] {
+  color: #ff1493 !important;
+}
+
+/* メンバーのユーザー名 */
+yt-live-chat-text-message-renderer #author-name[type="member"],
+yt-live-chat-text-message-renderer #author-name.member,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="member"] {
+  color: black !important;
+}
+
+/* 通常のユーザー名 */
+yt-live-chat-text-message-renderer #author-name {
+  color: #696969 !important;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px !important;
+  line-height: 18px !important;
+  font-weight: 700 !important;
+}
+
+/* ユーザー名を隠す */
+/* yt-live-chat-author-chip {
+  display: none !important;
+} */
+
+/* ユーザー名の余白削除 */
+yt-live-chat-author-chip[is-highlighted] #author-name.yt-live-chat-author-chip,
+yt-live-chat-author-chip {
+  padding: 0px 0px;
+}
+
+/* Messages - チャット本文 */
+yt-live-chat-text-message-renderer #message,
+yt-live-chat-text-message-renderer #message * {
+  color: #696969 !important;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+}
+
+/* メンバーシップ関連 */
+.yt-live-chat-membership-item-renderer #author-name {
+  color: #ffffff !important;;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+}
+
+.yt-live-chat-membership-item-renderer#header-subtext,
+.yt-live-chat-membership-item-renderer#header-primary-text {
+  color: #ffffff !important;;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 15px !important;
+  line-height: 15px !important;
+  font-weight: 400 !important;
+}
+
+/* SuperChat/Fan Funding Messages - スーパーチャットメッセージ */
+div.yt-live-chat-paid-message-renderer#author-name-chip,
+div.yt-live-chat-paid-message-renderer#author-name-chip span#author-name,
+div.yt-live-chat-paid-sticker-renderer#author-name-chip,
+div.yt-live-chat-paid-sticker-renderer#author-name-chip span#author-name{
+  /* ; /* 1行目の色 */
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+}
+
+/* スパチャ・メンバーシップ関連のヘッダー余白 */
+div.yt-live-chat-paid-message-renderer#header,
+div.yt-live-chat-paid-sticker-renderer#header,
+div.yt-live-chat-membership-item-renderer#header{
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.yt-live-chat-paid-message-renderer#purchase-amount,
+.yt-live-chat-paid-sticker-renderer#purchase-amount-chip,
+.yt-live-chat-paid-message-renderer#purchase-amount-column,
+.yt-live-chat-paid-sticker-renderer#purchase-amount-chip *,
+yt-live-chat-donation-announcement-renderer #text,
+yt-live-chat-donation-announcement-renderer #text * {
+  /* ; /* 2行目の色 */
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+}
+
+yt-formatted-string,
+yt-live-chat-paid-message-renderer #content,
+yt-live-chat-paid-message-renderer #content *,
+yt-live-chat-membership-item-renderer #content,
+yt-live-chat-membership-item-renderer #content *,
+yt-live-chat-membership-item-renderer #message {
+  /* color: #ffffff !important; /* super-chat-content-color */
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+  font-weight: 700 !important;
+}
+
+yt-live-chat-paid-message-renderer,
+yt-live-chat-membership-item-renderer {
+  margin: 4px 0 !important;
+}
+
+#header.yt-live-chat-membership-item-renderer {
+  background-color: #0a8043 !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-membership-item-renderer a {
+  text-decoration: none !important;
+}
+
+/* 削除/管理されたメッセージは非表示 */
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-membership-item-renderer[is-deleted],
+yt-live-chat-moderation-message-renderer,
+yt-live-chat-auto-mod-message-renderer {
+  display: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+yt-live-chat-ticker-paid-message-item-renderer,
+yt-live-chat-ticker-paid-message-item-renderer *,
+yt-live-chat-ticker-sponsor-item-renderer,
+yt-live-chat-ticker-sponsor-item-renderer * {
+  /* ; /* 2行目の色 */
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: 400 !important;
+}
+
+yt-live-chat-mode-change-message-renderer, 
+yt-live-chat-viewer-engagement-message-renderer, 
+yt-live-chat-server-error-message, 
+yt-live-chat-banner-manager,
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+/* チャット欄をすごく小さくした時に表示を崩れないようにする */
+yt-live-chat-app {
+  min-height: 0px;
+  min-width: 0px;
+  word-break: break-all;
+}
+
+/* スティッカーの名前の高さ */
+div#author-name.yt-live-chat-paid-sticker-renderer,
+span#price-column {
+  line-height: unset !important;
+}
+
+/* スティッカーのサイズ */
+#sticker img {
+  width: 54px !important;
+  height: 54px !important;
+}
+
+/* 余白調整とかいろいろ */
+div#author-info {
+  align-items: center !important;
+  padding: 8px 16px !important;
+  max-height: unset !important;
+}
+
+div#card {
+  padding: 0px 0px !important;
+}
+
+#author-info #author-photo {
+  margin-right: 11.25px !important;
+}
+
+div#action-panel.style-scope.yt-live-chat-renderer { display: none; } /* アンケートを非表示 */
+
+#header-subtext.yt-live-chat-membership-item-renderer {opacity: 0.75;}
+
+div#content.yt-live-chat-membership-item-renderer { background-color: #0f9d58 !important;; } /* メンスパ本文の背景色 */
+div#message.yt-live-chat-membership-item-renderer { color: #ffffff !important; } /* メンスパ本文のテキスト色 */
+
+yt-live-chat-text-message-renderer[is-deleted],yt-live-chat-moderation-message-renderer,yt-live-chat-auto-mod-message-renderer {display: none;}
+
+/* メンバーシップギフト関連を非表示 */
+ytd-sponsorships-live-chat-gift-purchase-announcement-renderer,
+ytd-sponsorships-live-chat-gift-redemption-announcement-renderer {
+  display: none;
+}
+
+yt-live-chat-text-message-renderer #content{
+  width: auto!important;
+}
+
+/* 吹き出し先端 */
+yt-live-chat-text-message-renderer #author-name:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 10px; /*上下位置調整*/
+  left: -15px; /*左右位置調整*/
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 0px 0px 20px; /*大きさ*/
+  border-color: rgba(255,255,255,255) rgba(0,0,0,0) rgba(0,0,0,0); /*色*/
+  transform: rotate(20deg); /*角度*/
+}
+
+/* 白枠 */
+#message{
+  display: block;
+  position: relative;
+  top: -7px; /*上下位置*/
+  margin-left: 0px; /*左右位置*/
+  background-color : #ffffff; /*色*/
+  padding : 8px 8px 8px 8px; /*塗りつぶし余白 上側から時計回り*/
+  border-radius: 10px; /*角丸 左上から時計回り*/
+  outline-style: none!important;
+}
+
+/* ヘアピン */
+/* 使う時は#message - padding : 8px 32px 8px 8px; */
+/* #message::after{
+  position: absolute;
+  content: "";
+  top: 5px;
+  right: 5px;
+  height: 0px;
+  width: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;  
+  border-bottom: 17.3205px solid #d6d91a;
+  transform: rotate(0.55turn);
+} */
+
+/* 毛玉 */
+#author-photo::before{
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  left: -10px;
+  top: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICAgd2lkdGg9Ijg3LjgzMDdtbSIgaGVpZ2h0PSIzNS45Nzg4bW0iCiAgICAgdmlld0JveD0iMCAwIDI0OSAxMDIiPgogIDxwYXRoIGlkPSLpgbjmip7nr4Tlm7IgIzIiCiAgICAgICAgZmlsbD0icGluayIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxIgogICAgICAgIGQ9Ik0gMzYuMDAsODEuMDAKICAgICAgICAgICBDIDMzLjcwLDc2LjUxIDMwLjgwLDcwLjk4IDM0LjAxLDY2LjIxCiAgICAgICAgICAgICAzNS43Nyw2My41OSAzOC45OCw2Mi4yNSAzOS4zMSw2MC4zMgogICAgICAgICAgICAgMzkuNzMsNTcuOTIgMzYuMjgsNTYuMDAgMzMuOTIsNTEuMDAKICAgICAgICAgICAgIDMwLjU4LDQzLjkzIDMxLjQ4LDM0LjE1IDM2LjM5LDI4LjAyCiAgICAgICAgICAgICAzOS42MiwyMy45NyA0Mi4xOSwyMi42OSA0Ny4wMCwyMS4zMAogICAgICAgICAgICAgNjkuNDgsMTQuODAgODAuMzMsMzcuNzcgNzIuNTksNTIuMDAKICAgICAgICAgICAgIDcwLjE4LDU2LjQyIDY1LjgzLDYwLjQ0IDYxLjAwLDYyLjAxCiAgICAgICAgICAgICA1Ny42MCw2My4xMSA1NC40Myw2Mi43MiA1Mi4yMSw2NC4wMgogICAgICAgICAgICAgNTAuMTYsNjUuMjIgNDguNTgsNjguMDIgNDYuNzksNjkuNzkKICAgICAgICAgICAgIDQwLjk1LDc1LjYzIDQxLjU5LDcyLjA1IDM4LjAwLDgxLjAwCiAgICAgICAgICAgICAzOC4wMCw4MS4wMCAzNi4wMCw4MS4wMCAzNi4wMCw4MS4wMCBaCiAgICAgICAgICAgTSAyMTMuMDAsODEuMDAKICAgICAgICAgICBDIDIxMi40NSw3OS4zMiAyMTEuOTksNzcuNTcgMjExLjA3LDc2LjA0CiAgICAgICAgICAgICAyMTEuMDcsNzYuMDQgMTk5LjYzLDY0LjAyIDE5OS42Myw2NC4wMgogICAgICAgICAgICAgMTk3LjExLDYyLjQ3IDE5NC40Niw2My41MSAxOTAuMDAsNjEuODcKICAgICAgICAgICAgIDE4MS44OSw1OC44OSAxNzUuMzYsNDkuNzYgMTc2LjIwLDQxLjAwCiAgICAgICAgICAgICAxNzguNDQsMTcuNDMgMjA0Ljc2LDE0LjYwIDIxNS4yMSwyOC4wOQogICAgICAgICAgICAgMjIwLjY4LDM1LjE1IDIyMC45OCw0My4wMyAyMTcuNTMsNTEuMDAKICAgICAgICAgICAgIDIxNi41Miw1My4zNCAyMTIuOTgsNTguMTMgMjEzLjAzLDU5LjkxCiAgICAgICAgICAgICAyMTMuMTAsNjIuNzEgMjE2Ljc3LDY0LjA4IDIxOC4yNiw2OC4wMQogICAgICAgICAgICAgMjE5Ljg2LDcyLjI2IDIxNy41Niw3Ny4wOCAyMTYuMDAsODEuMDAKICAgICAgICAgICAgIDIxNi4wMCw4MS4wMCAyMTMuMDAsODEuMDAgMjEzLjAwLDgxLjAwIFoiIC8+Cjwvc3ZnPg==");
+}
+
+/* リボン */
+#author-photo::after{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 30px;
+  top: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgICAgd2lkdGg9IjM4LjA5NTJtbSIgaGVpZ2h0PSIzNy43NDI1bW0iCiAgICAgdmlld0JveD0iMCAwIDEwOCAxMDciPgogIDxwYXRoIGlkPSJyaWJib24iCiAgICAgICAgZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMSIKICAgICAgICBkPSJNIDAuMDAsMS4wMAogICAgICAgICAgIEMgNS4xNCwzLjk5IDEwLjQ3LDEwLjI3IDE0LjgwLDE0LjYwCiAgICAgICAgICAgICAxNC44MCwxNC42MCA0MC40MCw0MC4yMCA0MC40MCw0MC4yMAogICAgICAgICAgICAgNDIuODcsNDIuNjggNTIuMjcsNTAuNzggNTEuOTksNTQuMDAKICAgICAgICAgICAgIDUxLjczLDU2Ljg5IDQxLjUxLDY2LjA5IDM5LjAwLDY4LjYwCiAgICAgICAgICAgICAzOS4wMCw2OC42MCAwLjAwLDEwNy4wMCAwLjAwLDEwNy4wMAogICAgICAgICAgICAgMC4wMCwxMDcuMDAgMC4wMCwxLjAwIDAuMDAsMS4wMCBaCiAgICAgICAgICAgTSAxMDcuMDAsMS4wMAogICAgICAgICAgIEMgMTA3LjAwLDEuMDAgMTA4LjAwLDI2LjAwIDEwOC4wMCwyNi4wMAogICAgICAgICAgICAgMTA4LjAwLDI2LjAwIDEwOC4wMCw3OS4wMCAxMDguMDAsNzkuMDAKICAgICAgICAgICAgIDEwOC4wMCw3OS4wMCAxMDcuMDAsMTA3LjAwIDEwNy4wMCwxMDcuMDAKICAgICAgICAgICAgIDEwNy4wMCwxMDcuMDAgNjkuMDAsNjguNjAgNjkuMDAsNjguNjAKICAgICAgICAgICAgIDY2LjQ1LDY2LjA1IDU2LjI3LDU2LjkxIDU2LjAxLDUzLjk1CiAgICAgICAgICAgICA1NS43MSw1MC40MCA2NS43MCw0Mi4xMCA2OC40MCwzOS40MAogICAgICAgICAgICAgNjguNDAsMzkuNDAgMTA3LjAwLDEuMDAgMTA3LjAwLDEuMDAgWiIgLz4KPC9zdmc+");
+}
+
+yt-live-chat-paid-message-renderer #message,
+yt-live-chat-membership-item-renderer #message,
+yt-live-chat-paid-message-renderer #message *,
+yt-live-chat-membership-item-renderer #message *{
+  background-color: transparent!important;
+}
